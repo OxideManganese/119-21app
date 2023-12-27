@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+#calendar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#calendar .numbers section {
+    height: 166%;
+}
