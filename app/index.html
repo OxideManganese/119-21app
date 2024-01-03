@@ -10,22 +10,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
+    <style>
+      .calendar-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* Для плавной прокрутки на iOS */
+      }
+
+      .day {
+        border: 1px solid #ccc;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .day.weekend b {
+        color: crimson
+      }
+
+      .calendar-item {
+        display: flex;
+        width: fit-content;
+      }
+
+
+      main.calendar-item .day {
+        height: 300px;
+        position: relative;
+      }
+
+
+    </style>
   </head>
+
   <body>
-    <main>
-        <div id="calendar">
-            <div class="numbers">
-                <section>I</section>
-                <section>II</section>
-                <section>III</section>
-                <section>IV</section>
-                <section>V</section>
-                <section>VI</section>
-            </div>
-            <div class="columns"></div>
-        </div>
-    </main>
-
-
+    <div class="calendar-container">
+      <header class="calendar-item">
+        <div class="day"><b>ПН</b>, 1 янв</div>
+        <div class="day"><b>ВТ</b>, 1 янв</div>
+        <div class="day"><b>СР</b>, 2 янв</div>
+        <div class="day"><b>ЧТ</b>, 3 янв</div>
+        <div class="day"><b>ПТ</b>, 4 янв</div>
+        <div class="day"><b>СБ</b>, 5 янв</div>
+        <div class="day weekend"><b>ВС</b>, 6 янв</div>
+      </header>
+      <main class="calendar-item">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day weekend"></div>
+      </main>
+    </div>
   </body>
 </html
