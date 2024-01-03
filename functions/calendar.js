@@ -1,25 +1,9 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const dateconverter = require('../app/scripts/functions/dateconverter.js')
 const lessons = require('../data/lessons.json')
 
 exports.handler = async function(event, context) {
 
-  //Функция формата даты
-  function dateconverter(entity) {
-    if (typeof(entity) == "object") {
-  
-    }
-  
-    let date = entity.split("T")[0];
-    let y = date.substr(0, 4);
-    let m = date.substr(4, 2) - 1;
-    let d = date.substr(6);
-  
-    let time = entity.split("T")[1];
-    let h = time.substr(0, 2) || 0;
-    let min = time.substr(2, 2) || 0;
-  
-    return new Date(y,m,d,h,min);
-  }
   
   // Возвращает номер недели
   Date.prototype.getWeek = function() {
