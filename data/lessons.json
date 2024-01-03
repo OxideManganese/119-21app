@@ -1,0 +1,111 @@
+[
+    {
+        "name": "Английский",
+        "otherntname": "Ин.яз",
+        "shortname": "АНГ",
+        "department": "PR",
+        "theachers": ["Вакулин", "Шудегова"],
+        "rooms": ["", ""]
+    },
+    {
+        "name": "ОБЖ",
+        "shortname": "ОБЖ",
+        "department": "PR",
+        "theachers": ["Волков"],
+        "rooms": ["314"]
+    },
+    {
+        "name": "Математика",
+        "shortname": "МТМ",
+        "department": "PR",
+        "theachers": ["Бурмистрова"],
+        "rooms": ["314"]
+    },
+    {
+        "name": "Доп. Англ.яз",
+        "otherntname": "ДОП",
+        "shortname": "ДОП",
+        "department": "PR",
+        "theachers": ["Вакулин"],
+        "rooms": [""]
+    },
+    {
+        "name": "Литература",
+        "shortname": "ЛТР",
+        "department": "PR",
+        "theachers": ["Афанасьева"],
+        "rooms": ["105"]
+    },
+    {
+        "name": "Русский",
+        "shortname": "РУС",
+        "department": "PR",
+        "theachers": ["Афанасьева"],
+        "rooms": ["105"]
+    },
+    {
+        "name": "Биология",
+        "shortname": "БИО",
+        "department": "PR",
+        "theachers": ["Бурова"],
+        "rooms": ["217"]
+    },
+    {
+        "name": "Физика",
+        "shortname": "ФКА",
+        "department": "PR",
+        "theachers": ["Коровкина"],
+        "rooms": ["322"]
+    },
+    {
+        "name": "ОПД",
+        "shortname": "ОПД",
+        "department": "SV",
+        "theachers": ["Юркевич"],
+        "rooms": ["215"]
+    },
+    {
+        "name": "Физкультура",
+        "otherntname": "Физ.культ.",
+        "shortname": "ФРА",
+        "department": "SV",
+        "theachers": ["Моторина"],
+        "rooms": [""]
+    },
+    {
+        "name": "Информатика",
+        "otherntname": "Инфо",
+        "shortname": "ИНФ",
+        "department": "SV",
+        "theachers": ["Моторина", "Малькова"],
+        "rooms": ["304"]
+    },
+    {
+        "name": "География",
+        "shortname": "ГГР",
+        "department": "PR",
+        "theachers": ["Ивойлова"],
+        "rooms": ["104"]
+    },
+    {
+        "name": "Обществознание",
+        "otherntname": "Обществозн.",
+        "shortname": "ОБЩ",
+        "department": "PR",
+        "theachers": ["Гусев"],
+        "rooms": ["113"]
+    },
+    {
+        "name": "История",
+        "shortname": "ИСТ",
+        "department": "PR",
+        "theachers": ["Чебачёва"],
+        "rooms": ["235"]
+    },
+    {
+        "name": "Химия",
+        "shortname": "ХИМ",
+        "department": "SV",
+        "theachers": ["Меньшиков"]
+    }
+]
