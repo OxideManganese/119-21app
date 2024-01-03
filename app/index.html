@@ -4,44 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заголовок страницы</title>
-    <link rel="stylesheet" href="./style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-
-    <style>
-      .calendar-container {
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        /* Для плавной прокрутки на iOS */
-      }
-
-      .day {
-        border: 1px solid #ccc;
-        width: 100px;
-        padding: 10px;
-        text-align: center;
-      }
-
-      .day.weekend b {
-        color: crimson
-      }
-
-      .calendar-item {
-        display: flex;
-        width: fit-content;
-      }
-
-
-      main.calendar-item .day {
-        height: 300px;
-        position: relative;
-      }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/functions/dateconverter.js"></script>
+    <script src="scripts/calendar.js"></script>
   </head>
 
   <body>
