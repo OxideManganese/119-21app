@@ -76,7 +76,7 @@ exports.handler = async function(event, context) {
   
       if (elem.location && elem.location.indexOf("Каб.") >= 0) {
         let localrooms = elem.location.replace(/Каб\.\s/g, "").split(" // ")
-        localrooms?.forEach((room, i) => room ? elem.rooms[i] = room : 0);
+        localrooms.forEach((room, i) => room  && elem.rooms[i] ? elem.rooms[i] = room : 0);
       }
   
   
