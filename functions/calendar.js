@@ -46,7 +46,7 @@ exports.handler = async function(event, context) {
   
       function cutoff(string) {
         let result = rowelem.split(string + ":")[1];
-        return (result?.split(string == "DESCRIPTION" ? "LAST-MODIFIED" : "\n")[0])
+        return (result?.split(string == "DESCRIPTION" ? "LAST-MODIFIED" : "\r")[0])
       }
     
       let elem = {
