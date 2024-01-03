@@ -1,29 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .calendar-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    /* Для плавной прокрутки на iOS */
-  }
+  display: flex;
+}
 
-  .day {
-    border: 1px solid #ccc;
-    width: 100px;
-    padding: 10px;
-    text-align: center;
-  }
+.days-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  /* Для плавной прокрутки на iOS */
+}
 
-  .day.weekend b {
-    color: crimson
-  }
+.day, .times {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-left: none;
+}
 
-  .calendar-item {
-    display: flex;
-    width: fit-content;
-  }
+.day {
+  width: 100px;
+  padding: 10px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.day.weekend b {
+  color: crimson
+}
+
+.calendar-item {
+  display: flex;
+  width: fit-content;
+}
 
 
-  main.calendar-item .day {
-    height: 300px;
-    position: relative;
-  }
-
+main.calendar-item .day, .times {
+  height: calc(var(--windowHeight) - 43px);
+  position: relative;
+  box-sizing: border-box;
+}

@@ -9,29 +9,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="scripts/functions/dateconverter.js"></script>
+    <script src="scripts/functions/windowHeight.js"></script>
     <script src="scripts/calendar.js"></script>
   </head>
 
   <body>
     <div class="calendar-container">
-      <header class="calendar-item">
-        <div class="day"><b>ПН</b>, 1 янв</div>
-        <div class="day"><b>ВТ</b>, 1 янв</div>
-        <div class="day"><b>СР</b>, 2 янв</div>
-        <div class="day"><b>ЧТ</b>, 3 янв</div>
-        <div class="day"><b>ПТ</b>, 4 янв</div>
-        <div class="day"><b>СБ</b>, 5 янв</div>
-        <div class="day weekend"><b>ВС</b>, 6 янв</div>
-      </header>
-      <main class="calendar-item">
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day weekend"></div>
-      </main>
+      <div class="times-container">
+        <div class="day" style="width: 75px">Время</div>
+        <main class="times">
+          <div class="time">8:00</div>
+          <div class="time">8:30</div>
+          <div class="time">9:00</div>
+          <div class="time">9:30</div>
+          <div class="time">10:00</div>
+          <div class="time">10:30</div>
+          <div class="time">11:00</div>
+        </main>
+      </div>
+      <div class="days-container">
+        <header class="calendar-item">
+          <div class="day"><b>ПН</b>, 1 янв</div>
+          <div class="day"><b>ВТ</b>, 1 янв</div>
+          <div class="day"><b>СР</b>, 2 янв</div>
+          <div class="day"><b>ЧТ</b>, 3 янв</div>
+          <div class="day"><b>ПТ</b>, 4 янв</div>
+          <div class="day"><b>СБ</b>, 5 янв</div>
+          <div class="day weekend"><b>ВС</b>, 6 янв</div>
+        </header>
+        <main class="calendar-item">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day weekend"></div>
+        </main>
+      </div>
     </div>
   </body>
 </html
