@@ -4,7 +4,7 @@ body {
 }
 
 .calendar-container {
-  display: flex;
+  position: relative;
 }
 
 .days-container {
@@ -14,13 +14,10 @@ body {
   /* Для плавной прокрутки на iOS */
 }
 
-.day, .times {
+.day {
   border: 1px solid #ccc;
   border-top: none;
   border-left: none;
-}
-
-.day {
   width: 100px;
   padding: 10px 0;
   text-align: center;
@@ -37,8 +34,36 @@ body {
 }
 
 
-main.calendar-item .day, .times {
-  height: calc(var(--windowHeight) - 43px);
+main.calendar-item .day {
+  height: calc(var(--windowHeight) - 65px);
   position: relative;
-  box-sizing: border-box;
+}
+
+.times-container {
+  position: absolute;
+  top: 60px;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+  color: #ccc;
+}
+
+.times-container .time {
+  height: calc((var(--windowHeight) - 65px) / 13);
+  margin-left: 5px;
+  width: calc(100% - 10px);
+}
+
+.times-container .time span {
+  font-size: small;
+}
+
+.times-container .time span::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #cfcfcf70;
+  position: relative;
+  top: 0.4em;
 }
