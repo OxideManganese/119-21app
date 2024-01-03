@@ -16,8 +16,8 @@ function dateconverter(entity) {
 }
 
 
-// try {
+try {
     module.exports = dateconverter; 
-// } catch (err) {
+} catch (err) {
   
-// }
+}
