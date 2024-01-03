@@ -37,7 +37,8 @@ exports.handler = async function(event, context) {
   }
 
   const eventsdata = await fetch(`https://calendar.google.com/calendar/ical/${GcalendarID}/public/basic.ics`);
-  const rawevents = await eventsdata.text().split("END:VEVENT");
+  let rawevents = await eventsdata.text();
+  rawevents = rawevents.split("END:VEVENT");
 
   let events = [];
   
