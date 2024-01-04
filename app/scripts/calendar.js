@@ -25,7 +25,9 @@ function updateCalendar(event) {
         events.innerHTML += `<div class="day" id="day${dateconverter(dayDate).split("T")[0]}"></div>`;
     }
 
-    container.scrollLeft = document.getElementById("day" + dateconverter(new Date).split("T")[0]).getBoundingClientRect().x - 50;
+    const nowDay = document.getElementById("day" + dateconverter(new Date).split("T")[0]);
+    nowDay.style.setProperty('background-color', 'floralwhite')
+    container.scrollLeft = nowDay.getBoundingClientRect().x - 50;
 }
 
 window.addEventListener('DOMContentLoaded', resizeCalendar);
