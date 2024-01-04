@@ -26,7 +26,7 @@ function updateCalendar(event) {
     }
 
     const nowDay = document.getElementById("day" + dateconverter(new Date).split("T")[0]);
-    nowDay.style.setProperty('background-color', 'floralwhite')
+    nowDay.style.setProperty('background-color', '#f0fff5')
     container.scrollLeft = nowDay.getBoundingClientRect().x - 50;
 }
 
