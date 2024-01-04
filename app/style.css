@@ -35,7 +35,7 @@ body {
 
 
 main.calendar-item .day {
-  height: calc(var(--windowHeight) - 130px);
+  height: calc(var(--windowHeight) - 45px);
   position: relative;
 }
 

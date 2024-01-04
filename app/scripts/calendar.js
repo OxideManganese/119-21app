@@ -21,7 +21,7 @@ function updateCalendar(event) {
         let date = dayDate.getDate();
         let month = ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"][dayDate.getMonth()];
 
-        header.innerHTML += `<div class="day ${day == "ВС" ? "weekend" : ""}"><b>${day}</b>, ${date} ${month}</div>`;
+        header.innerHTML += `<div class="day ${day == "ВС"?"weekend":""}"><b>${day}</b>, ${date} ${month}</div>`;
         events.innerHTML += `<div class="day" id="day${dateconverter(dayDate).split("T")[0]}"></div>`;
     }
 
