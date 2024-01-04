@@ -18,7 +18,7 @@ body {
   border: 1px solid #ccc;
   border-top: none;
   border-left: none;
-  width: 100px;
+  width: 130px;
   padding: 10px 0;
   text-align: center;
   box-sizing: border-box;
@@ -35,7 +35,7 @@ body {
 
 
 main.calendar-item .day {
-  height: calc(var(--windowHeight) - 65px);
+  height: calc(var(--windowHeight) - 130px);
   position: relative;
 }
 
@@ -49,7 +49,7 @@ main.calendar-item .day {
 }
 
 .times-container .time {
-  height: calc((var(--windowHeight) - 65px) / 13);
+  height: calc(var(--calendarHeight) / 13);
   margin-left: 5px;
   width: calc(100% - 10px);
 }
