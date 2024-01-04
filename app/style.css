@@ -39,6 +39,20 @@ main.calendar-item .day {
   position: relative;
 }
 
+.calendar-item .event {
+  background: darkgrey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  border: white solid 1px;
+  position: absolute;
+  top: calc(var(--calendarHeight) / 13 * var(--start) + 23px);
+  height: calc(var(--calendarHeight) / 13 * var(--duration) - 2px);
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+
 .times-container {
   position: absolute;
   top: 60px;
