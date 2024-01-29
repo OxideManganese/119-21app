@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачник</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        li:hover {
+            background-color: #f9f9f9;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked {
+            border-color: #2ecc71;
+            background-color: #2ecc71;
+        }
+        .content {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Домашнее задание</h1>
+    <ul>
+        <li>
+            <input type="checkbox"/>
+            <label for="task1">Математика - На завтра</label>
+            <div class="content">Выполнить задачи 1-5 на странице 25 в учебнике</div>
+        </li>
+        <li>
+            <input type="checkbox"/>
+            <label for="task2">Литература - На завтра</label>
+            <div class="content">Прочитать главу 3 и написать реферат на тему "Герои классической литературы"</div>
+        </li>
+        <li>
+            <input type="checkbox"/>
+            <label for="task3">История - На слкдующюю неделю</label>
+            <div class="content">Подготовить презентацию о Великой Французской революции</div>
+        </li>
+        <!-- Добавьте другие предметы и даты -->
+    </ul>
+</body>
+</html>
