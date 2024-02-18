@@ -3,9 +3,22 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+p {
+  font-size: 14px;
+} 
+
+h3 {
+  font-size: 16px;
+} 
+
 .calendar-container {
   position: relative;
 }
+
+.calendar-container h3,
+.calendar-container p {
+  margin: 5px 0;
+} 
 
 .days-container {
   overflow-x: auto;
@@ -14,14 +27,23 @@ body {
   /* Для плавной прокрутки на iOS */
 }
 
+.days-container::-webkit-scrollbar {
+  height: 2px;
+}
+
+.days-container::-webkit-scrollbar-thumb {
+  background-color: #21a649; 
+}
+
 .day {
   border: 1px solid #ccc;
   border-top: none;
   border-left: none;
-  width: 130px;
+  width: 170px;
   padding: 10px 0;
   text-align: center;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  font-size: 16px;
 }
 
 .day.weekend b {
@@ -41,43 +63,60 @@ main.calendar-item .day {
 
 .calendar-item .event {
   background: darkgrey;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5%;
-  border: white solid 1px;
+  text-align: left;
+  padding: 2px 10px;
+  margin: 2px;
   position: absolute;
-  top: calc(var(--calendarHeight) / 13 * var(--start) + 23px);
-  height: calc(var(--calendarHeight) / 13 * var(--duration) - 2px);
+  top: calc(var(--calendarHeight) / 9 * var(--start) + 23px);
+  height: calc(var(--calendarHeight) /9 * var(--duration) - 2px);
   width: -webkit-fill-available;
-  justify-content: center;
+  z-index: 2;
+  border-radius: 5px;
 }
 
 .times-container {
   position: absolute;
   top: 60px;
-  z-index: 2;
   width: 100%;
   pointer-events: none;
   color: #ccc;
 }
 
 .times-container .time {
-  height: calc(var(--calendarHeight) / 13);
+  height: calc(var(--calendarHeight) / 9);
   margin-left: 5px;
   width: calc(100% - 10px);
+  position: relative;
+}
+
+.times-container .time:last-child {
+  height: 0;
 }
 
 .times-container .time span {
+  position: relative;
   font-size: small;
+  top: -14px;
+  z-index: 3;
 }
 
-.times-container .time span::before {
+.times-container .time::before,
+.times-container .time::after {
   content: '';
   display: block;
-  width: 100%;
   height: 2px;
   background-color: #cfcfcf70;
-  position: relative;
+  position: absolute;
   top: 0.4em;
+}
+
+.times-container .time::before {
+  width: calc(100% - 50px);
+  left: 50px;
+  z-index: 1;
+}
+
+.times-container .time::after {
+  width: 50px;
+  z-index: 3;
 }

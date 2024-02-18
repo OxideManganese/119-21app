@@ -5,7 +5,7 @@ function setCssVar(variable, value) {
 }
 
 function resizeCalendar(event) {
-    setCssVar('windowHeight', window.outerHeight + 'px');
+    setCssVar('windowHeight', document.documentElement.clientHeight + 'px');
     setCssVar('calendarHeight', document.querySelector("main.calendar-item .day").offsetHeight + 'px');
 }
 
@@ -32,7 +32,7 @@ async function updateCalendar(event) {
         dayEvents?.forEach(event => {
             let schow = 1;
             
-            if (event.event == "II пара (2-ой час)") {
+            if (event.event == "II пара. 2-й час") {
                 let para2 = dayEvents.find(e => e.dtsend?.split("T")[1] == "125500")
                 para2 ? event = para2 : schow = 0
             }
@@ -44,10 +44,9 @@ async function updateCalendar(event) {
                 const dtend = dateconverter(event.dtend);
                 const startH = dtstart.getHours() + dtstart.getMinutes() / 60 - 8;
                 const duration = dtend.getHours() + dtend.getMinutes() / 60 - startH - 8;
-                eventblock = 
-                `<div class="event" style="--start: ${startH}; --duration: ${duration};">
-                <span>${event.lessonname || event.event}</span>
-                <i>${
+                let eventblock = `<div class="event" style="--start: ${startH}; --duration: ${duration};">`
+                eventblock += `<h3>${event.lessonname || event.event}</h3><p>`;
+                eventblock += `${
                     dtstart.getHours()
                 }:${
                     ("0" + dtstart.getMinutes()).slice(-2)
@@ -55,8 +54,11 @@ async function updateCalendar(event) {
                     dtend.getHours()
                 }:${
                     ("0" + dtend.getMinutes()).slice(-2)
-                }</i>
-                </div>`
+                }`;
+                if(event.rooms) {
+                    eventblock += "<br>Кабинет №" + event.rooms[0]
+                }
+                eventblock += "</p></div>"
                 eventsBlocks.push(eventblock);
             } 
         })
