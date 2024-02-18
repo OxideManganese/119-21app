@@ -15,7 +15,7 @@ async function updateCalendar(event) {
     const container = document.querySelector(".days-container");
     header.innerHTML = main.innerHTML = "";
 
-    const response = await fetch("https://serdechkin.online-ru.gq/.netlify/functions/calendar");
+    const response = await fetch("https://119-21.netlify.app/.netlify/functions/calendar");
     events = await response.json();
 
     for (let index = -14; index < 28; index++) {
